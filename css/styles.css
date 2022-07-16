@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav {
+  width: 100%;
+  padding: 0.5em 1em 0.8em 1em;
+  position: fixed;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(45, 42, 42, 0.4) 0 0 6px 6px;
+  box-shadow: rgba(45, 42, 42, 0.4) 0 0 6px 6px;
+}
+
+.nav-items {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.nav-items .nav-logo {
+  width: 5rem;
+  height: 3.5rem;
+}
+
+.nav-items svg {
+  margin-right: 2em;
+}
+
+.slider {
+  width: 100%;
+  height: calc(3.5rem + 1.5em + 33.3vw);
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  margin-top: calc(3.5rem + 1.5em);
+  width: 100%;
+  height: 33.3vw;
+  position: relative;
+  list-style: none;
+  z-index: -5;
+  transition: transform 1500ms;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  height: 90vw;
+  color: #fff;
+  font-size: clamp(0.8rem, 3vw, 1.8rem);
+  font-family: sans-serif;
+  padding: 0.5em 1em 0.5em 1em;
+  text-transform: uppercase;
+  background-size: cover;
+  text-align: right;
+  text-shadow: 0.1em 0.1em black;
+}
+.banner h2 {
+  margin-top: 3.5em;
+  font-size: clamp(2rem, 9vw, 4rem);
+  font-weight: 800;
+}
+
+.botanica {
+  background-image: url("../assets/botanica.jpg");
+}
+
+.arqueologia {
+  background-image: url("../assets/arqueologia.jpg");
+}
+
+.zoologia {
+  background-image: url("../assets/zoologia.jpg");
+}
+
+.internacional,
+.costa,
+.sierra,
+.selva {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  height: clamp(22rem, 80vw, 32rem);
+  text-shadow: none;
+}
+
+.costa h2,
+.sierra h2,
+.selva h2 {
+  font-size: clamp(3.5rem, 12vw, 5rem);
+}
+
+.internacional {
+  background-image: url("../assets/internacional.png");
+}
+.internacional h2 {
+  color: black;
+  margin: 0.2em 0 0 0;
+}
+
+.costa {
+  background-color: #ffebcd;
+  background-image: url("../assets/costa.png");
+  text-align: left;
+}
+.costa h2 {
+  color: black;
+  margin: 0.2em 0 0 0;
+}
+
+.sierra {
+  background-color: #534032;
+  background-image: url("../assets/sierra.png");
+  background-position: -3rem 100%;
+}
+.sierra h2 {
+  margin-top: clamp(13rem, 30%, 18rem);
+}
+
+.selva {
+  background-color: #3cb371;
+  background-image: url("../assets/selva.png");
+  text-align: left;
+}
+.selva h2 {
+  color: black;
+  margin: 0.2em 0 0 0;
+}
+
+.button {
+  padding: 0.8rem 0;
+}
+.button a {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 5px 0 0 5px;
+  text-shadow: none;
+}
+.button span {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  background-color: black;
+  border-radius: 0 5px 5px 0;
+  text-shadow: none;
+}
+
+.button a:hover,
+.button span:hover {
+  color: black;
+  background-color: khaki;
+}
+
+@media (min-width: 682px) {
+  .banner {
+    padding: 0.5em 1.5em 0.5em 1.5em;
+  }
+
+  .costa h2 {
+    margin-top: calc(20% + 1.5em);
+  }
+}
+@media (min-width: 1025px) {
+  .header-nav {
+    position: fixed;
+    padding: 1em 5em 2.5em 5em;
+  }
+
+  .nav-items .nav-logo {
+    width: 9rem;
+    height: 6.5rem;
+  }
+
+  .nav-items svg {
+    display: none;
+  }
+
+  .slider {
+    height: calc(6.5rem + 3.5em + 33.3vw);
+  }
+
+  .slides {
+    margin-top: calc(6.5rem + 3.5em);
+    height: 33.3vw;
+  }
+
+  .areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .areas h2 {
+    font-size: clamp(1.8rem, 2.2vw, 3rem);
+    margin-top: calc(50% + 0.5em);
+  }
+
+  .banner {
+    height: 33vw;
+    font-size: clamp(0.6rem, 1.5vw, 1.2rem);
+  }
+
+  .button a {
+    font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+  }
+  .button span {
+    font-size: clamp(0.6rem, 1.5vw, 1.5rem);
+  }
+
+  .regiones {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+  }
+  .regiones h2 {
+    font-size: clamp(2rem, 3.5vw, 4rem);
+  }
+
+  .internacional {
+    grid-column: 1/3;
+  }
+
+  .costa {
+    grid-column: 3/4;
+  }
+
+  .sierra {
+    grid-column: 1/2;
+  }
+
+  .selva {
+    grid-column: 2/4;
+  }
+}
